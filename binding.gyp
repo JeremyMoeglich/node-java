@@ -37,11 +37,6 @@
         'src/nodeJavaBridge.cpp',
         'src/utils.cpp'
       ],
-      "msvs_settings": {
-        "VCCLCompilerTool": {
-          "TrackFileAccess": "false"
-        }
-      },
       'include_dirs': [
         '<(javahome)/include',
         "<!(node -e \"require('nan')\")",

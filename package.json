@@ -1,5 +1,5 @@
 {
-  "name": "java",
+  "name": "@jeremymoeglich/java",
   "description": "Bridge API to connect with existing Java APIs.",
   "author": "Joe Ferner <joe@fernsroth.com>",
   "keywords": [
@@ -7,7 +7,7 @@
     "jvm",
     "bridge"
   ],
-  "version": "0.14.0",
+  "version": "0.14.1",
   "engines": {
     "node": ">=7.0.0"
   },
@@ -18,12 +18,12 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/joeferner/node-java/issues"
+    "url": "https://github.com/jeremymoeglich/node-java/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joeferner/node-java.git"
+    "url": "https://github.com/jeremymoeglich/node-java.git"
   },
   "dependencies": {
     "async": "^3.2.5",
