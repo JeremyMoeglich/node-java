@@ -37,6 +37,27 @@
         'src/nodeJavaBridge.cpp',
         'src/utils.cpp'
       ],
+
+      # === BEGIN C++20 SUPPORT FOR NODE 24+ ===
+      # MSVC & ClangCL:
+      'msvs_settings': {
+        'VCCLCompilerTool': {
+          'AdditionalOptions': [
+            '/std:c++20'      # MSVC/ClangCL
+          ]
+        }
+      },
+
+      # clang (if you ever build with plain clang/g++).
+      'cflags_cc!': [],      # clear any nasty defaults
+      'cflags_cc': [
+        '-std=c++20'         # clang/gcc
+      ],
+      'cxxflags': [
+        '-std=c++20'
+      ],
+      # === END C++20 SUPPORT ===
+
       'include_dirs': [
         '<(javahome)/include',
         "<!(node -e \"require('nan')\")",
