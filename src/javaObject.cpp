@@ -213,11 +213,11 @@ NAN_METHOD(JavaObject::methodCallPromise) {
   for (int i = 0 ; i < info.Length(); i++) {
     argv[i] = info[i];
   }
-  
+
   v8::MaybeLocal<v8::Value> result = Nan::Call(fn, info.This(), info.Length(), argv);
-  
+
   delete[] argv;
-  
+
   if (!result.IsEmpty()) {
     info.GetReturnValue().Set(result.ToLocalChecked());
   }
@@ -242,7 +242,7 @@ NAN_GETTER(JavaObject::fieldGetter) {
         jmethodID array_getLength = env->GetStaticMethodID(arrayClass, "getLength", "(Ljava/lang/Object;)I");
         jint arrayLength = env->CallStaticIntMethod(arrayClass, array_getLength, self->m_obj);
         assertNoException(env);
-        info.GetReturnValue().Set(static_cast<int32_t>(arrayLength));
+        info.GetReturnValue().Set(Nan::New<v8::Int32>(static_cast<int32_t>(arrayLength)));
         return;
       }
     }
