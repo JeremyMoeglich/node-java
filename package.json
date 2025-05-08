@@ -7,7 +7,7 @@
     "jvm",
     "bridge"
   ],
-  "version": "0.14.1",
+  "version": "0.15.0",
   "engines": {
     "node": ">=7.0.0"
   },
@@ -15,6 +15,10 @@
     {
       "name": "Joe Ferner",
       "email": "joe@fernsroth.com"
+    },
+    {
+      "name": "Jeremy Moeglich",
+      "email": "jeremy@moeglich.dev"
     }
   ],
   "bugs": {
